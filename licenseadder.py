@@ -1,4 +1,5 @@
 #!/bin/env python3
+#
 # licenseadder - A program for adding license text to project sourcecode
 # Copyright (C) 2026 Johan Henriksson
 #
