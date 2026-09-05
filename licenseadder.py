@@ -150,6 +150,7 @@ def main() -> None:
     license_name = args.license.lower()
     if license_name not in get_license_list():
         print(f"Error: Unknown license '{args.license}'")
+        print("The available licenses are: " + ','.join(get_license_list()))
         sys.exit(1)
     template = f"licenses/{license_name}-header.txt"
     
