@@ -7,7 +7,6 @@ set -e
 
 #git co example
 
-./licenseadder.py --project $PROJECT_NAME --dir $PROJECT_DIR \
-        --license lgpl3  --author "Johan Henriksson johan[a]dexar.se"  \
-        --name "example"
+./licenseadder.py --name $PROJECT_NAME --dir $PROJECT_DIR \
+        --license lgpl3  --author "Johan Henriksson johan[a]dexar.se" 
 

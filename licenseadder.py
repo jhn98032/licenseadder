@@ -118,7 +118,7 @@ def main() -> None:
         description="Recursively prepend LGPL-3.0 license header to C/C++ source and header files."
     )
     parser.add_argument(
-        "-p", "--project", required=True, help="Name of the project"
+        "-p", "--name", required=True, help="Name of the project"
     )
     parser.add_argument(
         "-d", "--dir", required=True, help="Target directory to scan"
@@ -131,19 +131,15 @@ def main() -> None:
         "-l", "--license", required=True, help=f"The name of the license ({license_list_text})"
     )
     parser.add_argument(
-        "-n", "--name", default="This program", help="The name of the program"
-    )
-    parser.add_argument(
         "--program-desc", default="", help="A short description of what the program does"
     )
 
     args = parser.parse_args()
 
     params = {}
-    params["project"]  = args.project
+    params["program_name"]  = args.name
     params["year"]  = str(datetime.now().year)
     params["author_name"]  = args.author
-    params["program_name"]  = args.name
     params["program_desc"]  = args.program_desc
     
     # Get the license header file
